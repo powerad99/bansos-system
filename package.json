@@ -1,0 +1,15 @@
+{
+  "name": "bansos-system",
+  "version": "1.0.0",
+  "description": "Sistema distribusi bantuan sosial dengan AI priority scoring",
+  "private": true,
+  "scripts": {
+    "postinstall": "echo 'Dependencies installed successfully'"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
