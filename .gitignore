@@ -28,3 +28,6 @@ logs/
 *.log
 *.sqlite3
 *.db
+
+# Node.js
+node_modules/
