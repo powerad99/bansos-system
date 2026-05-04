@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: bansos_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: bansos
+      POSTGRES_PASSWORD: bansos123
+      POSTGRES_DB: bansos_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - bansos_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bansos -d bansos_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: bansos_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - bansos_redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  bansos_pgdata:
+  bansos_redisdata:

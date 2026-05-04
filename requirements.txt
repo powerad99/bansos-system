@@ -1,0 +1,44 @@
+# ===== Web Framework =====
+fastapi==0.110.0
+uvicorn[standard]==0.27.1
+python-multipart==0.0.9
+websockets==12.0
+
+# ===== Database =====
+sqlalchemy==2.0.27
+psycopg2-binary==2.9.9
+
+# ===== Validation =====
+pydantic==2.6.1
+pydantic-settings==2.2.1
+email-validator==2.1.0
+
+# ===== Auth =====
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+
+# ===== Cache & Queue =====
+redis==5.0.1
+
+# ===== AI / Fuzzy Matching =====
+rapidfuzz==3.6.1
+
+# ===== OCR & Image Processing =====
+opencv-python-headless==4.9.0.80
+pytesseract==0.3.10
+Pillow==10.2.0
+numpy==1.26.4
+# paddleocr==2.7.3   # Uncomment kalau ingin pakai PaddleOCR (size ~500MB)
+# paddlepaddle==2.6.0
+
+# ===== QR Code =====
+qrcode[pil]==7.4.2
+
+# ===== Excel Export =====
+openpyxl==3.1.2
+pandas==2.2.0
+
+# ===== Misc =====
+python-dotenv==1.0.1
+httpx[http2]>=0.27.0
